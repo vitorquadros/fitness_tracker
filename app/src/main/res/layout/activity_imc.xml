@@ -15,6 +15,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <EditText
+        android:id="@+id/edit_imc_weight"
+        android:inputType="number"
+        android:maxLength="3"
+        android:hint="@string/weight"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/edit_imc_height"
+        android:inputType="number"
+        android:maxLength="3"
+        android:hint="@string/height"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 
 
 </LinearLayout>

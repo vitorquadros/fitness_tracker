@@ -36,9 +36,17 @@ public class MainActivity extends AppCompatActivity {
 
         rvMain.setLayoutManager(new GridLayoutManager(this, 2));
         MainAdapter adapter = new MainAdapter(mainItems);
-        adapter.setListener(view -> {
-            Intent intent = new Intent(MainActivity.this, ImcActivity.class);
-            startActivity(intent);
+        adapter.setListener(id -> {
+            switch (id) {
+                case 1:
+                    startActivity(new Intent(MainActivity.this, ImcActivity.class));
+                    break;
+                case 2:
+                    startActivity(new Intent(MainActivity.this, TmbActivity.class));
+                    break;
+
+            }
+
         });
         rvMain.setAdapter(adapter);
 
@@ -96,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
 
 
 }

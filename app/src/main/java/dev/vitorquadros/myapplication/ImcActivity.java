@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -57,6 +58,9 @@ public class ImcActivity extends AppCompatActivity {
                             runOnUiThread(() -> {
                                 if (calcId > 0) {
                                     Toast.makeText(ImcActivity.this, R.string.saved, Toast.LENGTH_LONG).show();
+                                    Intent intent = new Intent(ImcActivity.this, ListCalcActivity.class);
+                                    intent.putExtra("type", "imc");
+                                    startActivity(intent);
                                 }
                             });
                         }).start();

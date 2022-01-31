@@ -19,8 +19,14 @@ public class ListCalcActivity extends AppCompatActivity {
         if (extras != null) {
             String type = extras.getString("type");
 
-            List<Register> registers =  SqlHelper.getInstance(this).getRegisterBy(type);
-            Log.d("Teste", registers.toString());
+            new Thread(() -> {
+                List<Register> registers = SqlHelper.getInstance(this).getRegisterBy(type);
+
+                runOnUiThread(() -> {
+                    Log.d("Teste", registers.toString());
+                });
+            }).start();
+
         }
     }
 }

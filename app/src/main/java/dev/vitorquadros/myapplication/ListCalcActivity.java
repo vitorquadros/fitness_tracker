@@ -9,8 +9,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.text.ParseException;
@@ -50,7 +48,6 @@ public class ListCalcActivity extends AppCompatActivity {
     private class ListCalcAdapter extends RecyclerView.Adapter<ListCalcAdapter.ListCalcViewHolder> {
 
         private List<Register> datas;
-        private OnItemClickListener listener;
 
 
         public ListCalcAdapter(List<Register> datas) {
